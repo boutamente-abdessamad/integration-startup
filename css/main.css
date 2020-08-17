@@ -1,0 +1,326 @@
+/* ---------------------------------------------------------------------------- */
+/* -------------------------------- Global  STYLE ----------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+
+/*--------------------- Fonts ----------------*/
+@font-face {
+    font-family: "adam";
+    font-display: fallback;
+    src: url("../fonts/Adam.otf");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    font-display: fallback;
+    src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Black";
+    font-display: fallback;
+    src: url("../fonts/roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    font-display: fallback;
+    src: url("../fonts/roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    font-display: fallback;
+    src: url("../fonts/roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    font-display: fallback;
+    src: url("../fonts/roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Light";
+    font-display: fallback;
+    src: url("../fonts/poppins/Poppins-Light.otf");
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    font-display: fallback;
+    src: url("../fonts/poppins/Poppins-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    font-display: fallback;
+    src: url("../fonts/poppins/Poppins-Medium.otf");
+}
+
+@font-face {
+    font-family: "Roboto-Condensed-light";
+    font-display: fallback;
+    src: url("../fonts/roboto/RobotoCondensed-Light.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Condensed-Bold";
+    font-display: fallback;
+    src: url("../fonts/roboto/RobotoCondensed-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Condensed-Regular";
+    font-display: fallback;
+    src: url("../fonts/roboto/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-ExtraLight";
+    font-display: fallback;
+    src: url("../fonts/poppins/Poppins-ExtraLight.otf");
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    font-display: fallback;
+    src: url("../fonts/roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Blacksword";
+    font-display: fallback;
+    src: url("../fonts/poppins/Blacksword.otf");
+}
+
+/*-------------- End Fonts -------------------/
+
+/* header styles  */
+
+
+header.vt-header .container {
+    padding: 0;
+}
+
+header.vt-header nav.vt-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 86px;
+}
+
+header.vt-header nav.vt-navbar .menu-box {
+    display: flex;
+    align-items: center;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item {
+    padding: 0 24px;
+    margin: 0 1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items:not(.menu-actions) .menu-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    height: 14px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 1px solid var(--main-gray-color);
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item.phone-item img {
+    width: 21px;
+    height: 21px;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item.broch-item a {
+    width: 124px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    border: 0.5px solid var(--main-gray-color);
+    font-family: Roboto-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 27px;
+    letter-spacing: 0.11em;
+    color: var(--main-gray-color);
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item.broch-item a img {
+    margin-right: 12px;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item a {
+    font-family: Roboto-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 27px;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 0.09em;
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in all;
+    color: var(--main-black-color);
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items:not(.menu-actions) .menu-item a:after {
+    content: "";
+    width: 0px;
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s ease-in all;
+    height: 1px;
+    background-color: var(--main-black-color);
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items:not(.menu-actions) .menu-item a:hover::after {
+    width: 100%;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item.langs-item a {
+    font-family: Roboto-Bold;
+    color: var(--main-gray-color);
+    display: flex;
+    align-items: center;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item.langs-item img {
+    width: 8px;
+    height: 8px;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item.langs-item span {
+    position: relative;
+    padding-right: 6px;
+    margin-right: 6px;
+}
+
+header.vt-header nav.vt-navbar .menu-box ul.menu-items .menu-item.langs-item span::after {
+    content: "";
+    position: absolute;
+    height: 14px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 0.5px solid #C4C4C4;
+}
+
+header.vt-header nav.vt-navbar .vt-logo a {
+    font-family: Roboto-Condensed-Regular;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-black-color);
+}
+
+li.menu-item.langs-item {
+    padding-right: 0 !important;
+}
+
+/* end header styles  */
+
+/* Footer styles  */
+footer.vt-footer {
+    min-height: 238px;
+    padding: 30px 0;
+    display: flex;
+    background-color: #606163;
+    align-items: center;
+}
+
+footer.vt-footer>.container>.row {
+    align-items: center;
+    margin-right: -70px;
+    margin-left: -70px;
+}
+
+footer.vt-footer>.container>.row>.col,
+footer.vt-footer>.container>.row>[class*="col-"] {
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+.footer.vt-footer .footer-col {
+    position: relative;
+}
+
+footer.vt-footer>.container>.row>[class*="col-"]:not(:last-child) .footer-col::after {
+    content: "";
+    border-right: 1px solid var(--main-white-color);
+    position: absolute;
+    height: 136px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+footer.vt-footer .footer-title {
+    font-family: Roboto-Bold;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 0.09em;
+    margin-bottom: 25px;
+    color: var(--main-white-color);
+}
+
+footer.vt-footer .footer-logo img{
+    width: 160px;
+    height: 40px;
+}
+
+footer.vt-footer .footer-col p {
+    font-family: Roboto-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: 0.09em;
+    color: var(--main-white-color);
+    margin-bottom: 0;
+}
+
+footer.vt-footer .footer-col .footer-media {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-top: 30px;
+}
+
+footer.vt-footer .footer-col .footer-media li {
+    margin-right: 15px;
+}
+
+footer.vt-footer .footer-col .footer-media li img {
+    width: 30px;
+    height: 30px;
+}
+
+/* End footer styles  */
